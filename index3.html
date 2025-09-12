@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para mobile -->
+    <title>Avalix</title> <!-- Título da página -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="shortcut icon" href="img/janela_site.png" type="image/x-icon"> <!-- Favicon -->
+
+    <!-- LINK AOS (animações) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 100px; /* Espaço para não ficar atrás da navbar fixa */
+        }
+    </style>
+
+</head>
+
+<body class="bg-dark text-light"> <!-- Cor de fundo e texto -->
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-warning fs-5 d-flex align-items-center gap-2" href="#">
+                <img src="img/Avalix.png" alt="Logo Avalix" style="height: 110px; width: auto;">
+            </a>
+
+            <!-- Botão hamburguer para mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Itens da navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto d-flex align-items-lg-center gap-lg-4">
+
+                    <!-- Dropdown Filmes -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown">
+                            Filmes
+                        </a>
+                        <ul class="dropdown-menu bg-black border-0">
+                            <!-- Lista de gêneros de filmes -->
+                            <li><a class="dropdown-item text-warning" href="#">Ação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Aventura</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Animação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Biografia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia Romântica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Crime</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Documentário</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Drama</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Esporte</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Família</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Fantasia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Ficção Científica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Guerra</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">História</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Mistério</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Romance</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Suspense</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Terror</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown Séries -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown">
+                            Séries
+                        </a>
+                        <ul class="dropdown-menu bg-black border-0">
+                            <!-- Lista de gêneros de séries -->
+                            <li><a class="dropdown-item text-warning" href="#">Ação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Aventura</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Animação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Biografia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia Dramática</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Crime / Policial</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Documentário</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Drama</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Fantasia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Ficção Científica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Minissérie</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Mistério</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Reality Show</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Romance</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Suspense / Thriller</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Terror</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Barra de Pesquisa -->
+                    <li class="nav-item d-flex align-items-center my-2 my-lg-0">
+                        <form class="d-flex mx-lg-3 w-100">
+                            <input class="form-control bg-dark text-light border-warning" type="search"
+                                placeholder="Buscar filmes..." aria-label="Buscar">
+                        </form>
+                    </li>
+
+                    <!-- Botão Login -->
+                    <li class="nav-item my-2 my-lg-0">
+                        <button class="btn btn-warning fw-bold w-100 w-lg-auto" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Login
+                        </button>
+                    </li>
+
+                    <!-- Botão Cadastro -->
+                    <li class="nav-item my-2 my-lg-0">
+                        <button class="btn btn-outline-warning fw-bold w-100 w-lg-auto ms-lg-2" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">
+                            Cadastro
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-light">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-control" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-light">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning" id="registerModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-control" placeholder="Crie uma senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="text-center py-5 bg-dark">
+        <div class="container">
+            <h1 class="display-4 text-warning fw-bold mt-4">Bem-vindo ao Avalix</h1>
+            <p class="lead"></p> <!-- Descrição opcional -->
+        </div>
+    </header>
+
+    <!-- CARROSSEL -->
+    <div id="carouselExampleAutoplaying" class="carousel slide py-5 bg-dark d-flex justify-content-center"
+        data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+
+        <div class="position-relative w-50 border border-3 border-warning rounded-3">
+
+            <div class="carousel-inner">
+                <!-- Slides do carrossel -->
+                <div class="carousel-item active">
+                    <a href="./index.html">
+                    <img src="./img/Star Wars Carrosel.jpg" class="d-block w-100 img-fluid" alt="carrosel img 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/Como Treinar o seu Dragão Carrosel.jpg" class="d-block w-100 img-fluid"
+                        alt="carrosel img 2">
+                </div>
+                <div class="carousel-item">
+                    <a href="./index2.html">
+                        <img src="./img/Stranger Things Carrosel.jpg" class="d-block w-100 img-fluid"
+                            alt="carrosel img 3">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Botões de controle do carrossel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- SEÇÃO STAR WARS -->
+    <section class="section-filmes">
+        <h2>Star Wars Episódio III: A Vingança dos Sith</h2>
+
+        <!-- TRAILER DO FILME -->
+        <div class="trailer-container">
+            <div class="trailer-box">
+                <iframe src="https://www.youtube.com/embed/LH8mp2uwSGo?si=BDNLz6mHc1DnH7xj" title="Trailer do Filme"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Personagens -->
+        <div class="personagens-container">
+
+            <!-- Card de personagem -->
+            <div class="card-filme">
+                <img src="img/Luke Skywalker.jpg" alt="Luke Skywalker">
+                <div class="card-body">
+                    <h5 class="card-title">Luke Skywalker</h5>
+                    <p class="genero">Jedi / Herói Rebelde</p>
+                    <p class="card-text">Luke é um dos últimos Jedi e lutou para restaurar a paz na galáxia.</p>
+                    <div class="rating">
+                        <!-- Estrelas de avaliação -->
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                        <span class="note">4.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-filme">
+                <img src="img/Darth Vader.jpg" alt="Darth Vader">
+                <div class="card-body">
+                    <h5 class="card-title">Darth Vader</h5>
+                    <p class="genero">Sith / Antagonista</p>
+                    <p class="card-text">Darth Vader domina o lado negro da Força e é um dos vilões mais icônicos da
+                        galáxia.</p>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="note">5.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-filme">
+                <img src="img/Obi wan.jpg" alt="Obi-Wan Kenobi">
+                <div class="card-body">
+                    <h5 class="card-title">Obi-Wan Kenobi</h5>
+                    <p class="genero">Jedi / Mentor</p>
+                    <p class="card-text">Mestre Jedi que treinou Luke Skywalker e combateu os Sith para proteger a
+                        galáxia.
+                    </p>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star half">★</span>
+                        <span class="note">4.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMENTÁRIOS -->
+    <section class="comentarios">
+        <h3 class="text-warning text-center mb-4">Avaliações do Público</h3>
+
+        <!-- Comentário 1 -->
+        <div class="comentario">
+            <img src="https://i.pravatar.cc/50?img=1" alt="Avatar usuário">
+            <div class="conteudo-comentario">
+                <h5 class="nome">João Pedro</h5>
+                <p class="texto">Esse filme marcou minha infância! A luta entre Anakin e Obi-Wan é simplesmente épica 🔥
+                </p>
+                <span class="nota">⭐⭐⭐⭐⭐</span>
+            </div>
+        </div>
+
+        <!-- Comentário 2 -->
+        <div class="comentario">
+            <img src="https://i.pravatar.cc/50?img=2" alt="Avatar usuário">
+            <div class="conteudo-comentario">
+                <h5 class="nome">Maria Clara</h5>
+                <p class="texto">Ótimos efeitos visuais e a trilha sonora do John Williams é perfeita. Um dos melhores
+                    da saga!</p>
+                <span class="nota">⭐⭐⭐⭐⭐</span>
+            </div>
+        </div>
+
+        <!-- Comentário 3 -->
+        <div class="comentario">
+            <img src="https://i.pravatar.cc/50?img=3" alt="Avatar usuário">
+            <div class="conteudo-comentario">
+                <h5 class="nome">Lucas Andrade</h5>
+                <p class="texto">Gostei bastante, mas achei que poderiam ter explorado mais a transição do Anakin para
+                    Darth Vader.</p>
+                <span class="nota">⭐⭐⭐⭐☆</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="avalix-footer">
+        <div class="footer-container">
+
+            <!-- Logo do Footer -->
+            <div class="logof">
+                <a href="#">Avalix</a>
+            </div>
+
+            <!-- Links do Footer -->
+            <nav class="footer-links">
+                <a href="#">Sobre |</a>
+                <a href="#">Ajuda |</a>
+                <a href="#">Termos de Uso |</a>
+                <a href="#">Privacidade |</a>
+                <a href="#">Contato |</a>
+            </nav>
+
+            <!-- Redes Sociais -->
+            <div class="social-icons">
+                <a href="https://wa.me/5500000000000" target="_blank">
+                    <img src="./img/whats.png" alt="WhatsApp">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="./img/instagram.jpg" alt="Instagram">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="./img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://tiktok.com" target="_blank">
+                    <img src="./img/tiktok.jpg" alt="TikTok">
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Direitos autorais -->
+        <p class="copy">© 2025 Site Filmes - Todos os direitos reservados</p>
+
+        <!-- QR Code -->
+        <div class="qrcode-box">
+            <p>Escaneie o QR Code:</p>
+            <img src="./img/documentação QR.png" alt="QR Code Avalix">
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Inicializa animações AOS
+        AOS.init({
+            once: true, // anima uma vez ao aparecer
+            duration: 800 // duração da animação em ms
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalix</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/janela_site.png" type="image/x-icon">
+
+    <!-- LINK AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid"><!-- Mudei de container para container-fluid p/ não quebrar -->
+            <a class="navbar-brand fw-bold text-warning fs-5 d-flex align-items-center gap-2" href="#">
+                <img src="img/Avalix.png" alt="Logo Avalix" style="height: 110px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Itens da navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto d-flex align-items-lg-center gap-lg-4">
+                    <!-- Filmes -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown">
+                            Filmes
+                        </a>
+                        <ul class="dropdown-menu bg-black border-0">
+                            <li><a class="dropdown-item text-warning" href="#">Ação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Aventura</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Animação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Biografia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia Romântica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Crime</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Documentário</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Drama</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Esporte</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Família</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Fantasia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Ficção Científica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Guerra</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">História</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Mistério</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Romance</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Suspense</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Terror</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Séries -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown">
+                            Séries
+                        </a>
+                        <ul class="dropdown-menu bg-black border-0">
+                            <li><a class="dropdown-item text-warning" href="#">Ação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Aventura</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Animação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Biografia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia Dramática</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Crime / Policial</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Documentário</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Drama</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Fantasia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Ficção Científica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Minissérie</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Mistério</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Reality Show</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Romance</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Suspense / Thriller</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Terror</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Barra de Pesquisa -->
+                    <li class="nav-item d-flex align-items-center my-2 my-lg-0">
+                        <form class="d-flex mx-lg-3 w-100">
+                            <input class="form-control bg-dark text-light border-warning" type="search"
+                                placeholder="Buscar filmes..." aria-label="Buscar">
+                        </form>
+                    </li>
+
+                    <!-- Login -->
+                    <li class="nav-item my-2 my-lg-0">
+                        <button class="btn btn-warning fw-bold w-100 w-lg-auto" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Login
+                        </button>
+                    </li>
+
+                    <!-- Cadastro -->
+                    <li class="nav-item my-2 my-lg-0">
+                        <button class="btn btn-outline-warning fw-bold w-100 w-lg-auto ms-lg-2" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">
+                            Cadastro
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-light">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-control" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-light">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning" id="registerModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-control" placeholder="Crie uma senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="text-center py-5 bg-dark">
+        <div class="container">
+            <h1 class="display-4 text-warning fw-bold mt-4">Bem-vindo ao Avalix</h1>
+            <p class="lead"></p>
+        </div>
+    </header>
+
+
+    <!-- CARROSSEL -->
+    <div id="carouselExampleAutoplaying" class="carousel slide py-5 bg-dark d-flex justify-content-center"
+        data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+
+        <div class="position-relative w-50 border border-3 border-warning rounded-3"> <!-- wrapper central -->
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="./index3.html">
+                    <img src="./img/Star Wars Carrosel.jpg" class="d-block w-100 img-fluid" alt="carrosel img 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/Como Treinar o seu Dragão Carrosel.jpg" class="d-block w-100 img-fluid"
+                        alt="carrosel img 2">
+                </div>
+                <div class="carousel-item ">
+                    <a href="./index2.html">
+                        <img src="./img/Stranger Things Carrosel.jpg" class="d-block w-100 img-fluid"
+                            alt="carrosel img 3">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Botões de controle -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- CARDS DE FILMES -->
+    <section class="section-filmes">
+        <div class="container">
+
+            <!-- Título -->
+            <h2 class="mb-5 text-center">
+                <span data-aos="fade-up" data-aos-duration="800">Explorar Filmes</span>
+                <span data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">e Suas Notas</span>
+            </h2>
+
+            <!-- Filme 1: Pecadores -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/pecadores.jpg" class="img-fluid rounded-start" alt="Filme 1">
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Pecadores</h5>
+                            <p class="genero">Terror</p>
+                            <p class="card-text">
+                                São poucos os filmes que, tomados pela ambição de um cineasta, conseguem esbanjar...
+                            </p>
+
+                            <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisPecadores">
+                                <p class="card-text">
+                                    grandes ideias combinadas a recursos cinematográficos originais. Ainda mais difícil
+                                    é assistir a um longa que prenda a atenção de maneira tão irresistível que chega a
+                                    ser difícil desviar o olhar. Ryan Coogler é conhecido por conseguir atingir estes
+                                    picos em sua breve e potente filmografia. No entanto, Pantera Negra e Creed apenas o
+                                    preparam para esbanjar todo o seu amor pelo cinema com Pecadores.
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisPecadores">Mais</button>
+
+                            <p class="info-final">2025 ‧ 2h 17m</p>
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star half">★</span>
+                                <span class="note">4.5/5</span>
+                            </div>
+
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/perfil1.jpg" alt="Foto do avaliador">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Filme 2: Uma Sexta-Feira Muito Louca -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/uma sexta feira muito louca.webp" class="img-fluid rounded-start" alt="Filme 2">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Uma Sexta-Feira Mais Louca Ainda!</h5>
+                            <p class="genero">Comédia</p>
+                            <p class="card-text">
+                                “Sexta-Feira Mais Louca Ainda” entrega exatamente o que o mundo não sabia que
+                                precisava...
+                            </p>
+                            <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisSexta">
+                                <p class="card-text">
+                                    NOSTALGIA PURA. Lindsay Lohan e Jamie Lee brilham em seu melhor momento, deixando
+                                    claro que o talento supera qualquer passado conturbado. A química entre elas é
+                                    absurda, o timing cômico funciona do início ao fim e a sensação é a mesma de reviver
+                                    a magia do primeiro filme. Uma comédia perfeita, 5/5 , um presente da natureza para
+                                    quem ama boas histórias e boas atuações. O Millenium que vive em mim saúda o que
+                                    vive em vc, e também chama todas as outras gerações.
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisSexta">Mais</button>
+
+                            <p class="info-final">2025 ‧ 1h 51m</p>
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                                <span class="note">4.0/5</span>
+                            </div>
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/perfil2.jpg" alt="Foto do avaliador">
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filme 3: Interestelar -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/interestelar.jpg" class="img-fluid rounded-start" alt="Filme 3">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Interestelar</h5>
+                            <p class="genero">Ficção científica / Aventura</p>
+                            <p class="card-text">
+                                Esse é o melhor filme de ficção científica já criado na industrial cinematográfica...
+                            </p>
+                            <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisInterestelar">
+                                <p class="card-text">
+                                    Assim, me fez ser fascinado pelo estudo de buracos negros estelares e supermassivos
+                                    e outras áreas da física moderna. Nesse sentido, a história pode começar um pouco
+                                    tímida mas garanto que ocorre um crescendo para chegar em partes muito envolventes,
+                                    emocionantes e surpreendentes. Com isso, a trilha sonora desse filme é impecável e a
+                                    ajuda do físico teórico Kip Thorne nos dados do roteiro e pós produção dos efeitos
+                                    visuais fazem tirar o fôlego do público.
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisInterestelar">Mais</button>
+
+                            <p class="info-final">2014 ‧ 2h 49m</p>
+
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="note">5.0/5</span>
+                            </div>
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/perfil3.jpg" alt="Foto do avaliador">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filme 4: Rosário -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="800">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/rosario.webp" class="img-fluid rounded-start" alt="Filme 4">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Rosário</h5>
+                            <p class="genero">Terror</p>
+                            <p class="card-text">
+                                Roteiro ruim, fotografia ruim, muito corte seco sem sentido, efeitos ruins, atuações
+                                ruins...
+                            </p>
+
+                            <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisRosario">
+                                <p class="card-text">
+                                    para mim está entre os piores filmes de terror já feitos. Fico sem entender pessoas
+                                    que criam esses filmes péssimos esperando algum sucesso ou retorno porque essa bosta
+                                    é prejuízo na certa.
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisRosario">Mais</button>
+
+                            <p class="info-final">2025 ‧ 1h 28m</p>
+
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="star empty">★</span>
+                                <span class="note">2.0/5</span>
+                            </div>
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/perfil4.jpg" alt="Foto do avaliador">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="container my-5 series-section">
+        <section class="series-section">
+            <h2>
+                <span>Top 5 séries </span><span>TEENS</span>
+            </h2>
+        </section>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/wandinha.jpg" class="card-img-top card-img-custom" alt="Wandinha">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">1. WANDINHA</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 8,0</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=855QySYhW1s"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/outer banks.jpg" class="card-img-top card-img-custom" alt="Outer Banks">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">2. OUTER BANKS</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 7,5</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=RpEKE1EYQ7c"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/bon-appetit-your-majesty-.jpg" class="card-img-top card-img-custom"
+                        alt="Bon Appétit">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">3. BON APPÉTIT, VOSSA MAJESTADE</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 7,0</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=Ni8g0VaI5Yw"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/o verão....jpg" class="card-img-top card-img-custom"
+                        alt="O Verão que Mudou Minha Vida">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">4. O VERÃO QUE MUDOU MINHA VIDA</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 7,2</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=RayrBWW69Ys"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/minha vida com a familia walter.webp" class="card-img-top card-img-custom"
+                        alt="Minha Vida com a Família Walter">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">5. MINHA VIDA COM A FAMÍLIA WALTER</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 6,5</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=ZkYP16r2d68"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container my-5 series-section">
+        <section class="series-section">
+            <h2>
+                <span>Melhores </span><span>avaliações</span>
+            </h2>
+            <!-- seus cards aqui -->
+        </section>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/Game_of_Thrones_Temporada.jpg" class="card-img-top card-img-custom"
+                        alt="Game of Thrones">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Game of Thrones</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 9.2</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=KPLWWIOCOOQ"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/Breaking_bad.jpg" class="card-img-top card-img-custom" alt="Breaking Bad">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Breaking Bad</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 9.5</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=oG9sO_HLu2E"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/supernatural.jpeg" class="card-img-top card-img-custom" alt="Supernatural">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Supernatural</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 8.4</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=w4vEbI97CSE"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/anne with an e.jpg" class="card-img-top card-img-custom" alt="Anne with an E">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Anne with an E</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 8.6</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=bBervTlBurY"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/chernobyil.jpg" class="card-img-top card-img-custom" alt="Chernobyl">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Chernobyl</h5>
+                            <p><img src="https://img.icons8.com/emoji/20/fire.png" alt="Fogo"> 9,5</p>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=s9APLXM9Ei8"
+                            class="btn btn-outline-light btn-sm mt-auto">Trailer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Paginas">
+        <ul class="pagination container">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer class="avalix-footer">
+    <div class="footer-container">
+
+        <div class="logof">
+            <a href="#">Avalix</a>
+        </div>
+
+        <nav class="footer-links">
+            <a href="#">Sobre |</a>
+            <a href="#">Ajuda |</a>
+            <a href="#">Termos de Uso |</a>
+            <a href="#">Privacidade |</a>
+            <a href="#">Contato |</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://wa.me/5500000000000" target="_blank">
+                <img src="./img/whats.png" alt="WhatsApp">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="./img/instagram.jpg" alt="Instagram">
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="./img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+                <img src="./img/tiktok.jpg" alt="TikTok">
+            </a>
+        </div>
+
+    </div>
+
+    <p class="copy">© 2025 Site Filmes - Todos os direitos reservados</p>
+
+    <div class="qrcode-box">
+        <p>Escaneie o QR Code:</p>
+        <img src="./img/documentação QR.png" alt="QR Code Avalix">
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 800
+    });
+</script>
+
+</body>
+
+</html>

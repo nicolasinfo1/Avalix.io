@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalix</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="shortcut icon" href="img/janela_site.png" type="image/x-icon">
+
+    <!-- LINK AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            padding-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid"><!-- Mudei de container para container-fluid p/ não quebrar -->
+            <a class="navbar-brand fw-bold text-warning fs-5 d-flex align-items-center gap-2" href="#">
+                <img src="img/Avalix.png" alt="Logo Avalix" style="height: 110px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Itens da navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto d-flex align-items-lg-center gap-lg-4">
+                    <!-- Filmes -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown">
+                            Filmes
+                        </a>
+                        <ul class="dropdown-menu bg-black border-0">
+                            <li><a class="dropdown-item text-warning" href="#">Ação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Aventura</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Animação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Biografia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia Romântica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Crime</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Documentário</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Drama</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Esporte</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Família</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Fantasia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Ficção Científica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Guerra</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">História</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Mistério</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Romance</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Suspense</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Terror</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Séries -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown">
+                            Séries
+                        </a>
+                        <ul class="dropdown-menu bg-black border-0">
+                            <li><a class="dropdown-item text-warning" href="#">Ação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Aventura</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Animação</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Biografia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Comédia Dramática</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Crime / Policial</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Documentário</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Drama</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Fantasia</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Ficção Científica</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Minissérie</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Mistério</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Reality Show</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Romance</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Suspense / Thriller</a></li>
+                            <li><a class="dropdown-item text-warning" href="#">Terror</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Barra de Pesquisa -->
+                    <li class="nav-item d-flex align-items-center my-2 my-lg-0">
+                        <form class="d-flex mx-lg-3 w-100">
+                            <input class="form-control bg-dark text-light border-warning" type="search"
+                                placeholder="Buscar filmes..." aria-label="Buscar">
+                        </form>
+                    </li>
+
+                    <!-- Login -->
+                    <li class="nav-item my-2 my-lg-0">
+                        <button class="btn btn-warning fw-bold w-100 w-lg-auto" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Login
+                        </button>
+                    </li>
+
+                    <!-- Cadastro -->
+                    <li class="nav-item my-2 my-lg-0">
+                        <button class="btn btn-outline-warning fw-bold w-100 w-lg-auto ms-lg-2" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">
+                            Cadastro
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-light">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-control" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-light">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning" id="registerModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-control" placeholder="Crie uma senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="text-center py-5 bg-dark">
+        <div class="container">
+            <h1 class="display-4 text-warning fw-bold mt-4">Bem-vindo ao Avalix</h1>
+            <p class="lead"></p>
+        </div>
+    </header>
+
+
+    <!-- CARROSSEL -->
+    <div id="carouselExampleAutoplaying" class="carousel slide py-5 bg-dark d-flex justify-content-center"
+        data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+
+        <div class="position-relative w-50 border border-3 border-warning rounded-3"> <!-- wrapper central -->
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="./index3.html">
+                        <img src="./img/Star Wars Carrosel.jpg" class="d-block w-100 img-fluid" alt="carrosel img 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/Como Treinar o seu Dragão Carrosel.jpg" class="d-block w-100 img-fluid"
+                        alt="carrosel img 2">
+                </div>
+                <div class="carousel-item">
+                    <a href="index.html">
+                        <img src="./img/Stranger Things Carrosel.jpg" class="d-block w-100 img-fluid"
+                            alt="carrosel img 3">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Botões de controle -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- CARDS DE FILMES -->
+    <section class="section-filmes">
+        <div class="container">
+
+            <!-- Título -->
+            <h2 class="mb-5 text-center">
+                <span data-aos="fade-up" data-aos-duration="800">Sessão</span>
+                <span data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">Stranger Things</span>
+            </h2>
+
+            <!-- Filme 1: Pecadores -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/temp 1 stranger things.jpg" class="img-fluid rounded-start" alt="Filme 1">
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">STRANGER THINGS Temp 1</h5>
+                            <p class="genero">FANTASIA</p>
+                            <p class="card-text">
+                                Pontos fortes: Atmosfera nostálgica dos anos 80, suspense bem dosado, apresentação.
+                                impecável dos personagens
+                            </p>
+
+                            <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisPecadores">
+                                <p class="card-text">
+                                    A simplicidade da trama (Will desaparecido, o grupo tentando descobrir) é o que
+                                    torna tudo envolvente.
+
+                                    Ponto fraco: Alguns núcleos adultos são menos interessantes.
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisPecadores">Mais</button>
+
+                            <p class="info-final">2025 ‧ 2h 17m</p>
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star half">★</span>
+                                <span class="note">4,8 / 5</span>
+                            </div>
+
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/pessoal 1.jpg" alt="Foto do avaliador">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Filme 2: Uma Sexta-Feira Muito Louca -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/temp 2 stranger things.jpg" class="img-fluid rounded-start" alt="Filme 2">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">STRANGER THINGS Temp 2</h5>
+                            <p class="genero">FANTASIA</p>
+                            <p class="card-text">
+                                Pontos fortes: Expande o universo, dá mais destaque ao Will e aprofunda Eleven.
+                                <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisSexta">
+                                <p class="card-text">
+                                    A relação entre os personagens cresce muito.
+
+                                    Pontos fracos: Alguns episódios são criticados (especialmente o 7, focado em Eleven
+                                    fora de Hawkins, considerado deslocado).
+                                </p>
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisSexta">Mais</button>
+
+                            <p class="info-final">2025 ‧ 1h 51m</p>
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star half">★</span>
+                                <span class="note">4.5/5</span>
+                            </div>
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/pessoal 2.jpg" alt="Foto do avaliador">
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filme 3: Interestelar -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/temp 3 stranger things.jpg" class="img-fluid rounded-start" alt="Filme 3">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">STRANGER THINGS Temp 3</h5>
+                            <p class="genero">FANTASIA</p>
+                            <p class="card-text">
+                                Pontos fortes: Visual mais colorido, ritmo mais acelerado e introdução de Robin e do.
+                                shopping Starcourt
+                            </p>
+                            <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisInterestelar">
+                                <p class="card-text">
+                                    O humor e a ação estão no ponto.
+
+                                    Pontos fracos: Vilão mais exagerado, parte russa caricata e menos clima de terror
+                                    comparado às anteriores.
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisInterestelar">Mais</button>
+
+                            <p class="info-final">2014 ‧ 2h 49m</p>
+
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star half">★</span>
+                                <span class="note">4.4/5</span>
+                            </div>
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/pessoal 3.jpg" alt="Foto do avaliador">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filme 4: Rosário -->
+            <div class="card card-filme mb-4" data-aos="fade-up" data-aos-delay="800">
+                <div class="row g-0 d-flex align-items-start">
+                    <div class="col-md-3">
+                        <img src="./img/temp 4 stranger things.png" class="img-fluid rounded-start" alt="Filme 4">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">STRANGER THINGS Temp 4</h5>
+                            <p class="genero">FANTASIA/TERROR</p>
+                            <p class="card-text">
+                                Pontos fortes: Atmosfera sombria, Vecna como vilão memorável, evolução de Max, arcos
+                                emocionantes e direção mais madura.
+
+                                <!-- Conteúdo oculto -->
+                            <div class="collapse" id="maisRosario">
+                                <p class="card-text">
+                                    Episódios cinematográficos.
+
+                                    Ponto fraco: Duração excessiva de alguns episódios e alguns núcleos (como
+                                    Califórnia) menos interessantes.
+                                </p>
+                                </p>
+                            </div>
+
+                            <!-- Botão Mais -->
+                            <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="collapse"
+                                data-bs-target="#maisRosario">Mais</button>
+
+                            <p class="info-final">2025 ‧ 1h 28m</p>
+
+                            <!-- ⭐ RATING -->
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star half">★</span>
+                                <span class="note">4.6/5</span>
+                            </div>
+                            <!-- Foto do avaliador fora do card -->
+                            <div class="perfil-avaliador">
+                                <img src="./img/pessoal 4.jpg" alt="Foto do avaliador">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Seção Stranger Things -->
+    <section class="py-5 stranger-fix bg-black text-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 text-danger fw-bold">Stranger Things</h2>
+            </div>
+            <div class="row align-items-start">
+
+                <!-- Coluna da imagem e seletor -->
+                <div class="col-md-4 text-center">
+                    <!-- Poster -->
+                    <img src="./img/poster stranger temp 4.avif" class="img-fluid rounded-3 shadow mb-3"
+                        alt="Stranger Things Poster">
+
+                    <!-- Select -->
+                    <div class="d-flex flex-column align-items-center mb-4">
+                        <label for="temporadaSelect" class="form-label text-light fw-bold fs-5">Escolha a
+                            temporada:</label>
+                        <select class="form-select bg-dark text-light border-warning fs-5 py-2 px-3 w-75"
+                            id="temporadaSelect">
+                            <option value="1">Temporada 1</option>
+                            <option value="2">Temporada 2</option>
+                            <option value="3">Temporada 3</option>
+                            <option value="4">Temporada 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Coluna da direita (info da série) -->
+                <div class="col-md-8 text-start">
+                    <h3 class="fw-bold text-light">Stranger Things</h3>
+                    <p class="text-muted">Fantasia</p>
+
+                    <div class="mb-3">
+                        <span class="text-warning fs-4">★ ★ ★ ★ ★</span>
+                        <span class="text-light">(4.8 / 5)</span>
+                    </div>
+
+                    <p>
+                        Em uma pequena cidade, o desaparecimento de um menino leva seus amigos a descobrirem uma
+                        menina
+                        com poderes extraordinários e um mundo paralelo aterrorizante.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div id="episodiosContainer">
+                        <!-- Temporada 1 -->
+                        <div id="stranger-temporada-1" class="temporada">
+                            <h4 class="text-warning fw-bold mb-3">Temporada 1</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/1. O Desaparecimento de Will Byers.webp" alt="Episódio 1"
+                                        class="episodio-thumb me-3" />
+                                    1. O Desaparecimento de Will Byers
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/2. A Louca da Rua Maple.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    2. A Louca da Rua Maple
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/3. Holly, Jolly.jpg" alt="Episódio 3" class="episodio-thumb me-3" />
+                                    3. Holly, Jolly
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/4. A Banheira.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    4. A Banheira
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/5. O Corpo.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    5. O Corpo
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/6. A Pulga e o Acrobata.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    6. A Pulga e o Acrobata
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/7. O Monstro.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    7. O Monstro
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/8. De Ponta-cabeça.png" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    8. De Ponta-cabeça
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Temporada 2 -->
+                        <div id="stranger-temporada-2" class="temporada d-none">
+                            <h4 class="text-warning fw-bold mb-3">Temporada 2</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/1. O Desaparecimento de Will Byers.webp" alt="Episódio 1"
+                                        class="episodio-thumb me-3" />
+                                    1. Madmax
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/2. A Louca da Rua Maple.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    2. Gostosuras ou Travessuras, aberração
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/3. Holly, Jolly.jpg" alt="Episódio 3" class="episodio-thumb me-3" />
+                                    3. O girino
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/4. A Banheira.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    4. Dig Dug
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/5. O Corpo.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    5. O espião
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/6. A Pulga e o Acrobata.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    6. A irmã perdida
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/7. O Monstro.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    7. O Devorador de Mentes
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/8. De Ponta-cabeça.png" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    8. O Portal
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Temporada 3 -->
+                        <div id="stranger-temporada-3" class="temporada d-none">
+                            <h4 class="text-warning fw-bold mb-3">Temporada 3</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/1. O Desaparecimento de Will Byers.webp" alt="Episódio 1"
+                                        class="episodio-thumb me-3" />
+                                    1. Suzie, Você Está Me Ouvindo?
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/2. A Louca da Rua Maple.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    2. Ratos de Shopping
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/3. Holly, Jolly.jpg" alt="Episódio 3" class="episodio-thumb me-3" />
+                                    3. O Caso da Salva-Vidas Desaparecida
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/4. A Banheira.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    4. O Teste da Sauna
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/5. O Corpo.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    5. Os Flayed
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/6. A Pulga e o Acrobata.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    6. E Pluribus Unum
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/7. O Monstro.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    7. A Mordida
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/8. De Ponta-cabeça.png" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    8. A Batalha de Starcourt
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Temporada 4 -->
+                        <div id="stranger-temporada-4" class="temporada d-none">
+                            <h4 class="text-warning fw-bold mb-3">Temporada 4</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/1. O Desaparecimento de Will Byers.webp" alt="Episódio 1"
+                                        class="episodio-thumb me-3" />
+                                    1. O Clube do Inferno
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/2. A Louca da Rua Maple.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    2. A Maldição de Vecna
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/3. Holly, Jolly.jpg" alt="Episódio 3" class="episodio-thumb me-3" />
+                                    3. O Monstro e a Super-heroína
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/4. A Banheira.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    4. Querido Billy
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/5. O Corpo.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    5. O Projeto Nina
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/6. A Pulga e o Acrobata.jpg" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    6. A Mergulho
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/7. O Monstro.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    7. O Massacre no Laboratório de Hawkins
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/8. De Ponta-cabeça.png" alt="Episódio 2"
+                                        class="episodio-thumb me-3" />
+                                    8. Papa
+                                </li>
+                                <li class="list-group-item bg-dark text-light d-flex align-items-center">
+                                    <img src="./img/o carona.jpg" alt="Episódio 2" class="episodio-thumb me-3" />
+                                    9. O Carona
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- PRINCIPAIS PERSONAGENS -->
+    <div class="container my-5 series-section">
+        <section class="series-section">
+            <h2>
+                <span>Principais</span><span> Personagens</span>
+
+            </h2>
+        </section>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/dustin.webp" class="card-img-top card-img-custom" alt="Wandinha">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Dustin Henderson</h5>
+                        </div>
+                        <p class="card-text">
+                            Inteligente, curioso e carismático.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/eleven.jpg" class="card-img-top card-img-custom" alt="Outer Banks">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Eleven </h5>
+                        </div>
+                        <p class="card-text">
+                            Poderosa e vulnerável; luta entre ser arma e humana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/jonathan.webp" class="card-img-top card-img-custom" alt="Bon Appétit">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Jonathan Byers</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Introvertido e protetor, com ar artístico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/joyce.jpg" class="card-img-top card-img-custom" alt="O Verão que Mudou Minha Vida">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Joyce Byers</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Inteligente, curioso e carismático.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/max.jpg" class="card-img-top card-img-custom" alt="Minha Vida com a Família Walter">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Max Mayfield</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Forte, independente, mas marcada por dor interna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/lucas.jpg" class="card-img-top card-img-custom" alt="O Verão que Mudou Minha Vida">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Lucas Sinclair</h5>
+                        </div>
+                        <p class="card-text">
+                            Realista, pé no chão e protetor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/mike.jpg" class="card-img-top card-img-custom"
+                        alt="Minha Vida com a Família Walter">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Mike Wheeler</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Inteligente, curioso e carismático.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/steve.jpg" class="card-img-top card-img-custom"
+                        alt="Minha Vida com a Família Walter">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Steve Harrington</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Evolui de arrogante a herói carismático.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/will.jpg" class="card-img-top card-img-custom"
+                        alt="Minha Vida com a Família Walter">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Will Byers</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Sofrido, ligado ao terror psicológico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/hooper.jpg" class="card-img-top card-img-custom"
+                        alt="Minha Vida com a Família Walter">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Jim Hopper</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Durão, impulsivo, mas com lado paterno sensível.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="col">
+                <div class="card custom-card text-white h-100">
+                    <img src="./img/nancy.jpg" class="card-img-top card-img-custom"
+                        alt="Minha Vida com a Família Walter">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Nancy Wheeler</h5>
+
+                        </div>
+                        <p class="card-text">
+                            Determinada, investigativa e corajosa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Rodapé -->
+    <footer class="avalix-footer">
+        <div class="footer-container">
+            <div class="logof">
+                <a href="#">Avalix</a>
+            </div>
+            <nav class="footer-links">
+                <a href="#">Sobre |</a>
+                <a href="#">Ajuda |</a>
+                <a href="#">Termos de Uso |</a>
+                <a href="#">Privacidade |</a>
+                <a href="#">Contato |</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://wa.me/5500000000000" target="_blank"><img src="./img/whats.png" alt="WhatsApp"></a>
+                <a href="https://instagram.com" target="_blank"><img src="./img/instagram.jpg" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank"><img src="./img/facebook.png" alt="Facebook"></a>
+                <a href="https://tiktok.com" target="_blank"><img src="./img/tiktok.jpg" alt="TikTok"></a>
+            </div>
+        </div>
+        <p class="copy">© 2025 Site Filmes - Todos os direitos reservados</p>
+        <div class="qrcode-box">
+            <p>Escaneie o QR Code:</p>
+            <img src="./img/documentação QR.png" alt="QR Code Avalix">
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script2.js"></script>
+
+</body>
+
+</html>

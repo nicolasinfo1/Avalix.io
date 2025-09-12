@@ -1,0 +1,403 @@
+/* ==========================
+   VARIÁVEIS DE COR
+   Variáveis CSS que definem cores e gradientes usados no site
+========================== */
+:root {
+  --clr-primary: #181818; /* Cor primária escura */
+  --clr-secondary: #3a3a3a; /* Cor secundária para elementos de destaque */
+  --clr-accent: #FFD700; /* Cor de destaque (dourado) */
+  --clr-card: #dbdbdb; /* Cor para textos em cards */
+  --clr-shadow: #ffffff; /* Cor de sombras e textos claros */
+  --clr-no-color: transparent; /* Sem cor de fundo */
+  --clr-gradient0: linear-gradient(to right, #9e9e9e 20%, var(--clr-secondary) 50%, var(--clr-primary) 90%);
+  --clr-gradient2: linear-gradient(45deg, var(--clr-accent) 10%, #fdff6f 90%);
+}
+
+/* ==========================
+   GLOBAL
+   Estilização global do body e placeholders
+========================== */
+body {
+  background: var(--clr-gradient0); /* Fundo com gradiente */
+  color: var(--clr-shadow); /* Cor padrão do texto */
+  font-family: Arial, sans-serif; /* Fonte global */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  padding-top: 100px; /* Espaço no topo para navbar fixa */
+}
+
+::placeholder {
+  color: #ffc107 !important; /* Cor dos placeholders nos inputs */
+  opacity: 0.9;
+}
+
+/* Dropdown */
+.dropdown-menu.bg-black .dropdown-item {
+  color: #ffc107 !important; /* Cor dos itens do dropdown */
+}
+.dropdown-menu.bg-black .dropdown-item:hover,
+.dropdown-menu.bg-black .dropdown-item:focus {
+  background-color: #1a1a1a !important; /* Cor de fundo ao passar mouse ou foco */
+}
+
+/* ==========================
+   NAVBAR E CARROSSEL
+========================== */
+
+.container {
+  background: var(--clr-no-color);
+  border: none;
+  border-bottom: 2px solid var(--clr-accent);
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.navbar .container {
+  width: 100%;
+  height: 75px; /* Altura da navbar */
+}
+
+.carousel {
+  background: var(--clr-gradient0); /* Fundo do carrossel */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente os botões */
+  width: 5%; /* Largura dos botões */
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%; /* Botões maiores em telas pequenas */
+  }
+}
+
+/* ==========================
+   HEADER
+========================== */
+header.text-center {
+  background: var(--clr-gradient0); /* Fundo do header */
+  padding: 80px 0;
+  border-radius: 8px;
+}
+
+header h1 {
+  color: var(--clr-shadow); /* Cor do título */
+  font-family: 'lemonmilk-bold', sans-serif; /* Fonte do título */
+}
+
+/* ==========================
+   SEÇÃO FILMES
+========================== */
+.section-filmes {
+  padding: 60px 0;
+  background: var(--clr-gradient0); /* Fundo da seção */
+  border-radius: 8px;
+}
+
+.section-filmes h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--clr-shadow);
+  font-family: 'lemonmilk-bold', sans-serif;
+}
+
+.card-filme {
+  background: var(--clr-no-color); /* Sem fundo */
+  border: none;
+  border-bottom: 2px solid var(--clr-accent); /* Linha de destaque */
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 20px; /* Espaço entre imagem e texto */
+}
+
+.card-body {
+  padding-left: 0; /* Remove padding à esquerda */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--clr-shadow);
+  font-family: 'lemonmilk-bold', sans-serif;
+}
+
+.genero {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--clr-accent); /* Cor dourada para destaque */
+}
+
+.card-text {
+  color: var(--clr-card);
+  font-size: 0.95rem;
+}
+
+.card-filme img {
+  width: 250px;       
+  height: 350px;      
+  object-fit: cover;  /* Ajusta a imagem sem distorcer */
+  border-radius: 10px;
+  border: 3px solid var(--clr-accent); /* Borda dourada */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra da imagem */
+  display: block;
+  margin: 0;          /* Alinha à esquerda */
+}
+
+/* ==========================
+   RATING (ESTRELAS)
+========================== */
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.rating .star {
+  font-size: 1.2rem;
+  color: var(--clr-accent); /* Cor das estrelas cheias */
+  margin-right: 2px;
+}
+.rating .star.empty {
+  color: var(--clr-secondary); /* Cor das estrelas vazias */
+}
+.rating .note {
+  font-size: 0.9rem;
+  color: var(--clr-card);
+  margin-left: 8px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.avalix-footer {
+  background: #111;
+  color: #aaa;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.avalix-footer a {
+  color: #f5c518; /* Cor dos links */
+  text-decoration: none;
+}
+.avalix-footer a:hover {
+  text-decoration: underline;
+}
+
+.avalix-footer .footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.avalix-footer .logof {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.avalix-footer .footer-links {
+  margin-bottom: 15px;
+}
+.avalix-footer .copy {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-icons a img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* Torna imagens redondas */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.social-icons a img:hover {
+  transform: scale(1.15); /* Aumenta ao passar mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.qrcode-box {
+  margin-top: 20px;
+  text-align: center;
+}
+.qrcode-box img {
+  width: 120px;
+  border: 2px solid #f5c518;
+  border-radius: 8px;
+  padding: 6px;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.qrcode-box img:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 992px) {
+  body { font-size: 15px; }
+  .avalix-footer .footer-links { font-size: 0.95rem; }
+}
+
+@media (max-width: 768px) {
+  .avalix-footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .avalix-footer .logof { font-size: 18px; margin-bottom: 10px; }
+  .social-icons a img { width: 18px; height: 18px; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 14px; line-height: 1.4; }
+  .avalix-footer .copy { font-size: 0.75rem; margin-top: 10px; }
+  .avalix-footer .footer-links { font-size: 0.85rem; }
+  .social-icons a img { width: 16px; height: 16px; }
+}
+
+/* ==========================
+   TRAILER DO FILME
+========================== */
+.trailer-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.trailer-box {
+  width: 1000px;        /* largura fixa */
+  height: 500px;        /* altura fixa */
+  background-color: #000;
+  border: 3px solid var(--clr-accent);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.trailer-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==========================
+   AJUSTE DE PERSONAGENS
+========================== */
+.section-filmes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-filme {
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+.card-filme img {
+  margin: 0 auto; /* centraliza a imagem */
+}
+
+/* Container dos personagens */
+.personagens-container {
+  display: flex;
+  flex-wrap: wrap; /* quebra para a linha de baixo se não couber */
+  gap: 20px;
+  justify-content: center; /* centraliza horizontalmente */
+  margin-top: 40px;
+}
+
+/* Cada card de personagem */
+.card-filme {
+  flex: 1 1 300px; /* largura mínima de 300px */
+  max-width: 320px;
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  text-align: center;
+}
+
+/* Estrela "meia nota" */
+.star.half {
+  position: relative;
+  display: inline-block;
+  color: #555; /* cor de fundo da estrela vazia */
+}
+
+.star.half::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: gold; /* metade dourada da estrela */
+}
+
+/* ==========================
+   COMENTÁRIOS
+========================== */
+.comentarios {
+  margin: 50px auto;
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid gold;
+}
+
+.comentario {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.comentario:last-child {
+  border-bottom: none; /* Remove borda do último comentário */
+}
+
+.comentario img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Avatar circular */
+  border: 2px solid gold;
+}
+
+.conteudo-comentario {
+  flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+.conteudo-comentario .nome {
+  font-weight: bold;
+  margin: 0;
+  color: gold;
+}
+
+.conteudo-comentario .texto {
+  margin: 5px 0;
+  color: #ddd;
+}
+
+.conteudo-comentario .nota {
+  font-size: 14px;
+  color: gold;
+}
