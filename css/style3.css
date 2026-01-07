@@ -276,13 +276,14 @@ header h1 {
   display: flex;
   justify-content: center;
   margin: 40px 0;
+  padding: 0 16px; /* margem lateral no mobile */
 }
 
 .trailer-box {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  padding-bottom: 56.25%; /* proporção 16:9 */
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   background-color: #000;
   border: 3px solid var(--clr-accent);
@@ -290,7 +291,6 @@ header h1 {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
-
 
 .trailer-box iframe {
   position: absolute;
@@ -300,6 +300,7 @@ header h1 {
   height: 100%;
   border: none;
 }
+
 
 
 /* ==========================
