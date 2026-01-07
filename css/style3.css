@@ -408,3 +408,13 @@ header h1 {
   font-size: 14px;
   color: gold;
 }
+
+/* FIX TRAILER */
+.trailer-container {
+  width: 100%;
+}
+
+.trailer-box {
+  width: 100%;
+  max-width: 1000px;
+}
