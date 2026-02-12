@@ -64,4 +64,4 @@ Você também pode usar extensões como Live Server no VS Code para facilitar o 
 ## 👤 Autor
 
 Desenvolvido por **Nicolas, Kevin, Lívia e Natasha**  
-Projeto educacional feito em grupo – Curso Técnico em Informática (2026)
+Projeto educacional feito em grupo – Curso Técnico em Informática (2025)
